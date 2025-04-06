@@ -1,7 +1,21 @@
 from django.db import models
 
 
-# Create your models here.
+class Category(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Название категории")
+    description = models.TextField(
+        null=True, blank=True, verbose_name="Описание категории"
+    )
+
+    def __str__(self):
+        return f"{self.name} {self.description}"
+
+    class Meta:
+        verbose_name = "Категория"
+        verbose_name_plural = "Категории"
+        ordering = ["name"]
+
+
 class Product(models.Model):
     name = models.CharField(max_length=100, verbose_name="Название продукта")
     description = models.TextField(
@@ -28,19 +42,4 @@ class Product(models.Model):
     class Meta:
         verbose_name = "Продукт"
         verbose_name_plural = "Продукты"
-        ordering = ["name", "category"]
-
-
-class Category(models.Model):
-    name = models.CharField(max_length=100, verbose_name="Название категории")
-    description = models.TextField(
-        null=True, blank=True, verbose_name="Описание категории"
-    )
-
-    def __str__(self):
-        return f"{self.name} {self.description}"
-
-    class Meta:
-        verbose_name = "Категория"
-        verbose_name_plural = "Категории"
         ordering = ["name"]
