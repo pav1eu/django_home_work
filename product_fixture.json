@@ -1,0 +1,54 @@
+[
+{
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "Elfbar",
+        "description": "Грустно, но вкусно",
+        "image": "",
+        "category": 1,
+        "price": 2000,
+        "created_at": "2025-04-06T11:21:07.930Z",
+        "update_at": "2025-04-06T11:29:03.444Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+        "name": "HQD-шка",
+        "description": "Грустно и грустно",
+        "image": "",
+        "category": 1,
+        "price": 500,
+        "created_at": "2025-04-06T11:22:20.149Z",
+        "update_at": "2025-04-06T11:29:26.103Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+        "name": "Monster Hunter:Wilds",
+        "description": "Жена ругает, нет паузы",
+        "image": "",
+        "category": 2,
+        "price": 1500,
+        "created_at": "2025-04-06T11:23:42.695Z",
+        "update_at": "2025-04-06T11:38:25.483Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Path Of Exile 2",
+        "description": "Игра хорошая, но последнее обновление плохое",
+        "image": "",
+        "category": 2,
+        "price": 1200,
+        "created_at": "2025-04-06T11:25:04.920Z",
+        "update_at": "2025-04-06T11:29:33.251Z"
+    }
+}
+]
