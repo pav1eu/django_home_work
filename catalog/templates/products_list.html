@@ -8,7 +8,9 @@
 <ul class="list-group">
     {% for product in products%}
     <li class="list-group-item">
-        {{ product.name }} = {{ product.description|truncatechars:100}} - {{ product.created_at|date:"d M Y" }}
+        <a href="{% url 'catalog:product_detail' product.id %}">
+            {{ product.name }}
+        </a> - {{ product.description|truncatechars:100 }}
     </li>
     {% endfor %}
 </ul>

@@ -18,3 +18,6 @@ def product_detail(request, product_id):
     product = Product.objects.get(id=product_id)
     context = {'product': product}
     return render(request, 'product_detail.html', context)
+
+def description(request):
+    return render(request, 'description.html')
