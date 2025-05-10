@@ -1,0 +1,17 @@
+{% extends 'myblog_base.html' %}
+
+{% block title %}Все блоги{% endblock %}
+
+{% block content %}
+{% include 'myblog_header.html' %}
+<h2>Все блоги</h2>
+<ul class="list-group">
+    {% for blog in blogs %}
+    <li class="list-group-item">
+        <a href="{% url 'myblog:blog_detail' blog.pk %}">
+            {{ blog.title }}
+        </a> - {{ blog.content|truncatechars:100 }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
