@@ -1,0 +1,14 @@
+{% extends 'myblog_base.html' %}
+
+{% block title %}Форма записи блога{% endblock %}
+
+{% block content %}
+{% include 'myblog_header.html' %}
+<h2>Форма записи блога</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <a href="{% url 'myblog:blogs_list' %}" class="btn btn-primary">Отменить</a>
+</form>
+{% endblock %}
