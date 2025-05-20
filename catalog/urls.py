@@ -4,7 +4,7 @@ from catalog.views import ProductCreateView, ProductUpdateView, ProductDeleteVie
 app_name = 'catalog'
 
 urlpatterns = [
-    path('products/', ProductListView.as_view(), name='products_list'),
+    path('', ProductListView.as_view(), name='products_list'),
     path('products/new/', ProductCreateView.as_view(), name='product_create'),
     path('products/<int:pk>/', ProductDetailView.as_view(), name='product_detail'),
     path('products/update/<int:pk>/', ProductUpdateView.as_view(), name='product_update'),
