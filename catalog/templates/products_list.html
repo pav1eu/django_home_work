@@ -6,7 +6,7 @@
 {% include 'header.html' %}
 <h2>Список продуктов</h2>
 <ul class="list-group">
-    {% for product in products%}
+    {% for product in products %}
     <li class="list-group-item">
         <a href="{% url 'catalog:product_detail' product.pk %}">
             {{ product.name }}

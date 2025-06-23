@@ -19,7 +19,7 @@
 <a href="{% url 'catalog:products_list' %}" class="btn btn-primary">Обратно в каталог</a>
 
 {% if perms.catalog.can_unpublish_product %}
-<form method="post" action="{% url 'catalog:product_unpublish' product.id %}">
+<form method="post" action="{% url 'catalog:product_unpublish' product.pk %}">
     {% csrf_token %}
     <button type="submit" class="btn btn-warning">Снять с публикации</button>
 </form>
