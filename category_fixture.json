@@ -1,0 +1,18 @@
+[
+{
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+        "name": "Электронные сигареты",
+        "description": "Вредность и пакость"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+        "name": "Компьютерные игры",
+        "description": "Дофаминовый взрыв"
+    }
+}
+]

@@ -1,0 +1,16 @@
+{% extends 'myblog_base.html' %}
+
+{% load static %}
+
+{% block title %}Детали продукта{% endblock %}
+
+{% block content %}
+{% include 'myblog_header.html' %}
+<h2>{{ blog.title }}</h2>
+<p>Описание: {{ blog.content }}</p>
+<p>Количество просмотров: {{ blog.views_count }}</p>
+<p>Дата производства: {{ blog.created_at|date:"d M Y" }}</p>
+<a href="{% url 'myblog:blog_update' blog.pk %}" class="btn btn-secondary">Редактировать</a>
+<a href="{% url 'myblog:blog_delete' blog.pk %}" class="btn btn-danger">Удалить</a>
+<a href="{% url 'myblog:blogs_list' %}" class="btn btn-primary">Ко всем блогам</a>
+{% endblock %}
